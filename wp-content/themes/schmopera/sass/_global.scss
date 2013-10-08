@@ -54,8 +54,4 @@ body {
 }
 
 /* Clearing */
-.clear,
-[class*="content"],
-[class*="site"] {
-	@include clearfix;
-}
+

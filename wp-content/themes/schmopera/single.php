@@ -13,7 +13,11 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
-
+            
+            <div class="post-author">
+            <h3>Written by <?php the_author(); ?> </h3>
+            <?php the_author_description(); ?> 
+            </div>
 			<?php sch_content_nav( 'nav-below' ); ?>
 
 			<?php
