@@ -4,6 +4,7 @@ $blue: #1094C7;
 $green: #5C8516;
 $orange: #E97E0D;
 $gray: #ACBBC0;
+$black: #333;
 
 a {
     -webkit-transition: all .5s ease-in-out;
@@ -32,27 +33,30 @@ a:hover {
 }
 
 .site-header {
-    padding: 40px 0 0 40px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 220px;
+    width: 240px;
+    height: 100%;
+    background: #eee;
     
     .site-title {
         a {
             display: block;
-            font: 2em 'Lily Script One', cursive;
-            width: 180px;
-            height: 180px;
-            border-radius: 100%;
+            font: 2.5em 'Lily Script One', cursive;
+            width: 240px;
+            height: 160px;
             background: $blue;
             text-align: center;
-            line-height: 180px;
+            line-height: 160px;
             color: #fff;
             text-decoration: none;
             
+            text-shadow: .07em .07em 0 darken($blue, 10%);
+            
             &:hover {
-                background: #222;
+                background: $black;
+                text-shadow: .07em .07em 0 darken($black, 50%);
             }
         }
     }
@@ -67,8 +71,9 @@ a:hover {
 }
 
 .site-content {
-    margin-left: 300px;
-    max-width: 880px;
+    margin-left: 240px;
+    max-width: 860px;
+    padding: 3.5em 0 0 7em;
 }
 
 .post-author {
@@ -106,7 +111,7 @@ a:hover {
 }
 
 article {
-    padding: 5.2em 0 2em 0;
+    padding: 0 0 2em 0;
     font-size: 1.3em;
     color: #555;
     line-height: 1.6em;
@@ -136,20 +141,18 @@ article {
     
     blockquote {
         font-family: 'Roboto Condensed', sans-serif;
-        font-weight: normal;
+        font-weight: 100;
         font-size: 2em;
         line-height: 1.1em;
-        text-transform: uppercase;
         text-align: right;
-        letter-spacing: 2px;
         color: $green;
         
         float: left;
         width: 60%;
         
-        margin: 1em 1em 1em -4em;
+        margin: 1em 1em 1em -3em;
         padding: 0 .5em;
-        border-right: 4px solid $green;
+        border-right: 2px solid $green;
         
         p {
             margin: 0;
@@ -157,10 +160,10 @@ article {
         
         &:nth-child(odd) {
             float: right;
-            margin: 1em -4em 1em 1em;
+            margin: 1em -3em 1em 1em;
             text-align: left;
             border-right: 0;
-            border-left: 4px solid $green;
+            border-left: 2px solid $green;
         }
         
     }
@@ -203,7 +206,7 @@ article {
         }
         
         &:hover {
-            background: #222;
+            background: $black;
         }
     }
     
