@@ -11,6 +11,9 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php sch_posted_on(); ?>
+			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'sch' ), __( '1 Comment', 'sch' ), __( '% Comments', 'sch' ) ); ?></span>
+			<?php endif; ?>			
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -21,7 +24,31 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sch' ) ); ?>
+		<a href="<?php the_permalink(); ?>"><img src="
+		<?php  
+			$args = array(
+				'post_type' => 'attachment',
+				'numberposts' => -1,
+				'offset' => 0,
+				'orderby' => 'menu_order',
+				'order' => 'asc',
+				'post_status' => null,
+				'post_parent' => $post->ID,
+				);
+			$attachments = get_posts($args);
+			if ($attachments) {
+				foreach ($attachments as $attachment) {
+					if(wp_attachment_is_image( $attachment->ID )) {
+						echo wp_get_attachment_image_src( $attachment->ID, false )[0];
+						break;
+					}
+				}
+			}
+			
+		?>
+"></a>								  
+		<?php echo wp_trim_words( get_the_content(), 100 ); ?>
+		
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'sch' ),

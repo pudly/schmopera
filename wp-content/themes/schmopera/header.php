@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
     
 <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>    
-<link href="http://fonts.googleapis.com/css?family=Roboto:100,400|Roboto+Condensed|Alegreya:700" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Roboto:100,300|Roboto+Condensed|Autour+One" rel="stylesheet" type="text/css" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,6 +28,8 @@
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			
+			<?php get_search_form(); ?>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

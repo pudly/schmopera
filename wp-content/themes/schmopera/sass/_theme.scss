@@ -1,36 +1,38 @@
 /* Schmopera theme specific */
 
-$blue: #1094C7;
-$green: #5C8516;
-$orange: #E97E0D;
-$gray: #ACBBC0;
-$black: #333;
 
-a {
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}
-body, html {
-    min-height: 100%;
-}
+/* Colour variables */
+	$blue: #1094C7;
+	$green: #5C8516; 
+	$orange: #E97E0D;
+	$gray: #ACBBC0;
+	$black: #333;
 
-body {
-    padding-right: 2em;
-}
-
-a {
-    color: $orange;
-}
-
-a:visited {
-    color: #aaa;
-}
-
-a:hover {
-    color: $blue;
-}
+/* global */
+	body, html {
+		min-height: 100%;
+	}
+	
+	body {
+		padding-right: 2em;
+	}
+	
+	/* anchors */
+		a {
+			color: $orange;
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+		}
+		
+		a:visited {
+			color: $gray;
+		}
+		
+		a:hover {
+			color: $blue;
+		}
 
 .site-header {
     position: fixed;
@@ -41,22 +43,60 @@ a:hover {
     background: #eee;
     
     .site-title {
+		width: 240px;
+		height: 135px;
+		position: relative;
+		background: $blue;
+		
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			height: 135px;
+			width: 93px;
+			background: url(img/logo-left.png) no-repeat;
+			background-size: 100% 100%;
+			top: 0;
+			left: 0;
+			
+			z-index: 2;
+			
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;				
+		}
+		
+		&:after {
+			left: auto;
+			right: 0;
+			background: url(img/logo-right.png) no-repeat top right;
+			background-size: 100% 100%;
+		}
+		
+		&:hover:before,
+		&:hover:after {
+			width: 40px;
+		}
+		
         a {
             display: block;
-            font: 2.5em 'Lily Script One', cursive;
-            width: 240px;
-            height: 160px;
-            background: $blue;
+			width: 100%;
+			height: 100%;
+            font: 2em 'Lily Script One', cursive;
             text-align: center;
-            line-height: 160px;
+            line-height: 125px;
             color: #fff;
             text-decoration: none;
-            
-            text-shadow: .07em .07em 0 darken($blue, 10%);
-            
+			position: relative;
+			z-index: 1;
+//			text-shadow: .07em .07em 0 darken($black, 50%);
+			
             &:hover {
-                background: $black;
-                text-shadow: .07em .07em 0 darken($black, 50%);
+            	color: #fff;
+				text-shadow: 0px 3px 0px darken($blue, 25%);
+				-webkit-transform: rotate(-5deg) scale(1.1);
+				z-index: 3;
             }
         }
     }
@@ -109,35 +149,71 @@ a:hover {
         left: 0;
     }
 }
+.entry-content {
+	margin: 0;
+}
 
 article {
     padding: 0 0 2em 0;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #555;
     line-height: 1.6em;
-    
+	
     .entry-title {
         clear: none;
-        color: #222;
         margin: 0;
-        font-size: 3em;
-        padding: 0;
-        line-height: .85em;
+        font-size: 2.5em;
+        line-height: 1em;
+		padding: 20px 0;
         
         a {
-            color: #222;
+            color: $black;
             text-decoration: none;
+			position: relative;
             
             &:hover {
-                color: $blue;
+                color: $blue !important;
             }            
         }
     }
     
     .entry-meta {
-        font-size: .8em;
-        line-height: 2em;
+		margin: 0;
+        font-size: .9em;
+		font-weight: 400;
+        line-height: 1em;
+		padding: 0 0 20px 0;
+		color: $gray;
+		
+		.comments-link a {
+			float: right;
+			text-decoration: none;
+			color: $gray;
+			
+			&:hover {
+				color: $blue;
+			}
+		}
     }
+	
+	.entry-content {
+		font-size: 1.1em;
+		line-height: 1.5em;
+		
+		img:first-child {
+			display: block;
+			margin-bottom: 1em;
+			border-bottom: 0;
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+			
+			&:hover {
+				box-shadow: 0 0 0 5px $blue;
+			}
+		}
+	}
     
     blockquote {
         font-family: 'Roboto Condensed', sans-serif;
@@ -224,4 +300,34 @@ article {
 
 footer.entry-meta {
     display: none;
+}
+
+.search-form {
+	background: $gray;
+	padding: 20px;
+	
+	input {
+		width: 190px;
+		background: #fff !important;
+		border: 0;
+		border-radius: 0;
+		display: block;
+		padding: 0;
+		font-weight: 300;
+		padding: 5px;
+		font-size: 1em;
+		
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 0 5px $blue;
+		}
+	}
+	
+	label {
+		display: none;
+	}
+	
+	input[type=submit] {
+		display: none;
+	}
 }
