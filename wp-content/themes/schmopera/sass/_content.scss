@@ -29,14 +29,13 @@
 .post-author {
     color: $gray;
     margin: 1.5em 0;
-    font-size: 1.3em;
+    font-size: 1em;
     position: relative;
-    font-family: 'Roboto Condensed', sans-serif;
     max-width: 80%;
     
     h3 {
-        font-size: 2em;
-        color: $blue;
+        font-size: 1.4em;
+        color: darken($blue, 20%);
     }
     
     &:before {
@@ -74,7 +73,7 @@
         margin: 0;
         font-size: 2.5em;
         line-height: 1em;
-		padding: 20px 0;
+		padding: 0 0 20px 0;
         
         a {
             color: $black;
@@ -147,6 +146,41 @@
         }
                 
     }
+}
+
+.widget-area {
+	.widget {
+		margin-bottom: 2em;
+		
+		h1 {
+			margin-bottom: .5em; 
+		}
+		
+		ul {
+			list-style: none;
+		}
+	}
+}
+
+.widget_tag_cloud {
+	.tagcloud {
+		overflow: hidden;
+	
+		a {
+			font-size: .9em !important;
+			float: right;
+			padding: .5em .7em;
+			background: $blue;
+			color: #fff;
+			text-decoration: none;
+			margin-left: 5px;
+			margin-bottom: 5px;
+			
+			&:hover {
+				background: $black;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 960px) {

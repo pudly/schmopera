@@ -8,7 +8,7 @@
 //    margin-left: 240px;
     max-width: 1020px;
 	margin: auto;
-	padding: 140px 20px 80px 20px;
+	padding: 180px 20px 80px 20px;
 }
 
 .content-area {
@@ -18,6 +18,11 @@
 
 .widget-area {
 	width: 25%;
+	
+	aside {
+		padding-right: 40px;
+		text-align: right;
+	}
 }
 
 footer {
