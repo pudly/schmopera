@@ -14,7 +14,6 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	font-family: $header-font;
-	clear: both;
 }
 hr {
 	background-color: #ccc;
@@ -217,9 +216,13 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
-	@include hoverActiveFocus(color, midnightblue);
+	color: $gray;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
 }
-a:visited {
-	color: purple;
+
+a:hover {
+	color: $blue;
 }

@@ -1,0 +1,82 @@
+/*
+
+	Global Theme Header
+
+*/
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: $blue;
+	z-index: 10;
+	
+	.site-branding {
+		max-width: 1020px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+    
+    .site-title {
+		height: 100px;
+		position: relative;
+		background: $blue;
+		float: left;
+		
+        a {
+			float: left;
+			height: 100%;
+            font: 2.4em 'Lily Script One', cursive;
+            text-align: center;
+            line-height: 96px;
+            color: lighten($blue, 50%);
+            text-decoration: none;
+			position: relative;
+			z-index: 1;
+			text-shadow: 0 3px 0px darken($blue, 10%);
+			padding-right: 10px;
+			
+			&:hover {
+				top: 2px;
+				color: #fff;
+				text-shadow: none;
+			}
+        }
+    }
+    
+    .site-description {
+        display: none;
+    }
+	
+	.search-form {
+		float: right;
+		padding-top: 27px;
+		
+		input {
+			width: 250px;
+			background: #fff !important;
+			border: 0;
+			border-radius: 0;
+			display: block;
+			padding: 0;
+			font-weight: 300;
+			padding: 10px;
+			font-size: 1em;
+			
+			&:focus {
+				outline: 0;
+				box-shadow: 0 0 0 5px $blue;
+			}
+		}
+		
+		label {
+			display: none;
+		}
+		
+		input[type=submit] {
+			display: none;
+		}
+	}
+}

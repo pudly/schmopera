@@ -1,57 +1,66 @@
-/* =Global
------------------------------------------------ */
+/* 
+
+	Global Theme Styles
+
+*/
+
+body, html {
+	min-height: 100%;
+}
 
 body {
-    background: #fff;
+	background: #fff;
 }
 
 /* border box all the things */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* Alignment */
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: $vspacing;
-}
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: $vspacing;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
+/* alignment */
+	.alignleft {
+		float: left;
+		margin-right: $vspacing;
+	}
+	.alignright {
+		float: right;
+		margin-left: $vspacing;
+	}
+	.aligncenter {
+		clear: both;
+		display: block;
+		margin: 0 auto;
+	}
 
 /* Text meant only for screen readers */
-.screen-reader-text {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
+	.screen-reader-text {
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important;
+	}
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
+	.screen-reader-text:hover,
+	.screen-reader-text:active,
+	.screen-reader-text:focus {
+		background-color: #f1f1f1;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: #21759b;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar */
+	}
 
-/* Clearing */
+/* forms */
 
+::-webkit-input-placeholder { font-weight: 200; color: darken($blue, 25%) }
+::-moz-placeholder { color:#f00; } /* firefox 19+ */
+:-ms-input-placeholder { color:#f00; } /* ie */
+input:-moz-placeholder { color:#f00; }
