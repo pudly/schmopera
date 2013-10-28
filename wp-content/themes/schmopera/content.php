@@ -24,27 +24,7 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<a href="<?php the_permalink(); ?>"><img src="
-		<?php  
-			$args = array(
-				'post_type' => 'attachment',
-				'numberposts' => -1,
-				'offset' => 0,
-				'orderby' => 'menu_order',
-				'order' => 'asc',
-				'post_status' => null,
-				'post_parent' => $post->ID,
-				);
-			$attachments = get_posts($args);
-			if ($attachments) {
-				foreach ($attachments as $attachment) {
-					if(wp_attachment_is_image( $attachment->ID )) {
-						echo wp_get_attachment_image_src( $attachment->ID, false)[0];
-						break;
-					}
-				}
-			};
-		?>"></a>								  
+								  
 		<?php echo wp_trim_words( get_the_content(), 100 ); ?>
 		
 		<?php
