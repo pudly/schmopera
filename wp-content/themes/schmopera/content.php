@@ -39,7 +39,7 @@
 			if ($attachments) {
 				foreach ($attachments as $attachment) {
 					if(wp_attachment_is_image( $attachment->ID )) {
-						echo wp_get_attachment_image_src($attachment->ID, false);
+						echo wp_get_attachment_image_src($attachment->ID, false)[0];
 						break;
 					}
 				}
