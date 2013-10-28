@@ -491,8 +491,7 @@ a:hover {
 .site-content {
   max-width: 1020px;
   margin: auto;
-  padding: 140px 20px 80px 20px;
-  overflow: auto; }
+  padding: 140px 20px 80px 20px; }
 
 .content-area {
   width: 75%;
@@ -500,6 +499,10 @@ a:hover {
 
 .widget-area {
   width: 25%; }
+
+footer {
+  clear: both;
+  padding: 100px; }
 
 /* =Menu
 ----------------------------------------------- */

@@ -9,7 +9,6 @@
     max-width: 1020px;
 	margin: auto;
 	padding: 140px 20px 80px 20px;
-	overflow: auto;
 }
 
 .content-area {
@@ -21,3 +20,7 @@
 	width: 25%;
 }
 
+footer {
+	clear: both;
+	padding: 100px;
+}
