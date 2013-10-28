@@ -24,7 +24,7 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<a href="<?php the_permalink(); ?>"><img src="
+		<a href="<?php the_permalink(); ?>">
 		<?php  
 			$args = array(
 				'post_type' => 'attachment',
@@ -40,12 +40,12 @@
 				foreach ($attachments as $attachment) {
 					if(wp_attachment_is_image( $attachment->ID )) {
 						$image = wp_get_attachment_image_src($attachment->ID, false);
-						echo $image[0];
+						echo '<img src="' . $image[0] . '">';
 						break;
 					}
 				}
 			};
-		?>"></a>								  
+		?></a>								  
 		<?php echo wp_trim_words( get_the_content(), 100 ); ?>
 		
 		<?php
