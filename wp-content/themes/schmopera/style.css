@@ -115,7 +115,8 @@ body, html {
   min-height: 100%; }
 
 body {
-  background: #fff; }
+  background: url(img/subtle_white_feathers_@2X.png);
+  background-size: 500px 333px; }
 
 /* border box all the things */
 * {
@@ -171,15 +172,18 @@ body {
   color: #073c51; }
 
 ::-moz-placeholder {
-  color: #f00; }
+  font-weight: 200;
+  color: #073c51; }
 
 /* firefox 19+ */
 :-ms-input-placeholder {
-  color: #f00; }
+  font-weight: 200;
+  color: #073c51; }
 
 /* ie */
 input:-moz-placeholder {
-  color: #f00; }
+  font-weight: 200;
+  color: #073c51; }
 
 body,
 button,
@@ -187,7 +191,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
   font-size: 1.6rem;
@@ -195,7 +199,8 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Autour One", serif; }
+  font-family: "Lato", serif;
+  font-weight: bold; }
 
 hr {
   background-color: #ccc;
@@ -429,58 +434,10 @@ a:hover {
 */
 .site-header {
   position: fixed;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 110px;
-  background: url(img/nav.png) repeat-x;
-  z-index: 10; }
-  .site-header .site-branding {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 0 20px; }
-  .site-header .site-title {
-    height: 100px;
-    position: relative;
-    float: left; }
-    .site-header .site-title a {
-      float: left;
-      height: 100%;
-      font: 2.4em 'Lily Script One', cursive;
-      text-align: center;
-      line-height: 96px;
-      color: #daf3fc;
-      text-decoration: none;
-      position: relative;
-      z-index: 1;
-      text-shadow: 0 3px 0px #0c7198;
-      padding-right: 10px; }
-      .site-header .site-title a:hover {
-        top: 2px;
-        color: #fff;
-        text-shadow: none; }
-  .site-header .site-description {
-    display: none; }
-  .site-header .search-form {
-    float: right;
-    padding-top: 27px; }
-    .site-header .search-form input {
-      width: 250px;
-      background: #fff !important;
-      border: 0;
-      border-radius: 0;
-      display: block;
-      padding: 0;
-      font-weight: 300;
-      padding: 10px;
-      font-size: 1em; }
-      .site-header .search-form input:focus {
-        outline: 0;
-        box-shadow: 0 0 0 5px #1094c7; }
-    .site-header .search-form label {
-      display: none; }
-    .site-header .search-form input[type=submit] {
-      display: none; }
+  top: 0;
+  width: 300px;
+  height: 100%; }
 
 /* 
 	
@@ -488,23 +445,12 @@ a:hover {
 
 */
 .site-content {
-  max-width: 1020px;
-  margin: auto;
-  padding: 180px 20px 80px 20px; }
-
-.content-area {
-  width: 75%;
-  float: right; }
-
-.widget-area {
-  width: 25%; }
-  .widget-area aside {
-    padding-right: 40px;
-    text-align: right; }
-
-footer {
-  clear: both;
-  padding: 100px; }
+  padding: 75px 75px 0 300px;
+  max-width: 1500px; }
+  .site-content .content-area {
+    padding: 40px 140px 15px 140px;
+    background: #fff;
+    border-radius: 4px; }
 
 /* =Menu
 ----------------------------------------------- */

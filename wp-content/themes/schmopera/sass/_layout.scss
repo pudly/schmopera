@@ -5,27 +5,39 @@
 */
 
 .site-content {
-//    margin-left: 240px;
-    max-width: 1020px;
-	margin: auto;
-	padding: 180px 20px 80px 20px;
+  padding: 75px 75px 0 300px;
+  max-width: 1500px;
+  
+  .content-area {
+    padding: 40px 140px 15px 140px;
+    background: #fff;
+    border-radius: 4px;
+  }
 }
 
-.content-area {
-	width: 75%;
-	float: right;
-}
-
-.widget-area {
-	width: 25%;
-	
-	aside {
-		padding-right: 40px;
-		text-align: right;
-	}
-}
-
-footer {
-	clear: both;
-	padding: 100px;
-}
+//
+//.site-content {
+////    margin-left: 240px;
+//    max-width: 1020px;
+//	margin: auto;
+//	padding: 180px 20px 80px 20px;
+//}
+//
+//.content-area {
+//	width: 75%;
+//	float: right;
+//}
+//
+//.widget-area {
+//	width: 25%;
+//	
+//	aside {
+//		padding-right: 40px;
+//		text-align: right;
+//	}
+//}
+//
+//footer {
+//	clear: both;
+//	padding: 100px;
+//}

@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
     
 <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>    
-<link href="http://fonts.googleapis.com/css?family=Roboto:100,300|Roboto+Condensed|Autour+One" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700" rel="stylesheet" type="text/css" />
 </head>
 
 <body <?php body_class(); ?>>
