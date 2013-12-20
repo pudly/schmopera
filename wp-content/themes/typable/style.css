@@ -1545,3 +1545,9 @@ input[type="text"], input[type="email"], textarea {
 	padding-bottom: 10px;
 	border-bottom: dotted 1px #e8e8e8;
 }
+
+/* Schmopera Tweaks */
+
+.entry-title a:hover {
+	color: ##00a9e0 !important;
+}
