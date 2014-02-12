@@ -189,3 +189,10 @@ if ( get_option( 'okay_theme_customizer_ajax_toggle' ) == 'enabled' ) {
       }
     }
 }
+
+// Replace the [...] for generated snippets
+
+function new_excerpt_more( $more ) {
+	return /* <a href="'. get_permalink( getd_the_ID() ) . '"> */ '...' /* </a> */;
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

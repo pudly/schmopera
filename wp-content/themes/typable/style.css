@@ -1551,3 +1551,7 @@ input[type="text"], input[type="email"], textarea {
 .entry-title a:hover {
 	color: #00a9e0 !important;
 }
+
+.post-169 .attachment-featured-image {
+	width: 400px !important;
+}
